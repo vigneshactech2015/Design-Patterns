@@ -35,3 +35,4 @@ const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
 console.log(processManager === processManager2)
+//it returns true because it points to same instance and we are not creating two seperate instances
