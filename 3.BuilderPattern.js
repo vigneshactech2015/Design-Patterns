@@ -30,3 +30,29 @@ class UserBuilder {
 
 let usertest = new UserBuilder('Vignesh').setPhone("9876543210").build()
 console.log('>>user',usertest)
+
+
+
+// Example 2
+
+// Using JavaScript constructor pattern
+
+class Address {
+  constructor(zip,street){
+    this.zip = zip
+    this.street = street
+  }
+}
+
+class User {
+  constructor(name , {age,phone='1234567890',address} = {}){
+    this.name = name
+    this.age = age
+    this.phone = phone
+    this.address = address
+  }
+}
+
+let user = new User('Bob',{age:10,phone:'1111',address: new Address('1','Main')})
+
+console.log(user)
